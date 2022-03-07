@@ -1,17 +1,21 @@
 import {city} from './city.js';
-import {player} from './player.js';
+import {player, player} from './player.js';
 import {inventory} from './inventory.js';
 
 var ctest = new city("israel", 0, 0, 0);
 var test = new player(0, 0, 0);
 var x;
 
-function new_Map()
-{
-
 var city1 = new city("israel", 0, 0, 0);
 var city2 = new city("eygept", 0, 0, 0);
 var city3 = new city("cyprus", 0, 0, 0);
+
+var player = new player(2000, 0, 1, city1)
+var dayCounter = 0;
+
+
+function newMap()
+{
 
 city1.setWheatValue(city1.getRandomMaterialValue("wheat"));
 city1.setWoodValue(city1.getRandomMaterialValue("wood"));
@@ -31,10 +35,16 @@ console.log(city3);
 
 }
 
+function newGame()
+{
+    
+    
+}
 
 
 
-new_Map()
+
+newMap()
 
 console.log();
 console.log(test.getInventory());

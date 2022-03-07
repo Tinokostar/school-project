@@ -1,5 +1,6 @@
 import {inventory} from './inventory.js'
 import {city} from './city.js'
+import {newMap} from './mainScript.js'
 
 class player
 {
@@ -9,7 +10,7 @@ class player
         this.money = money;
         this.bodyGuards = bodyGuards;
         this.shipTier = shipTier;
-        this.place = place;
+        this.place = city1;
     }
 
     getPlace()
