@@ -1,6 +1,6 @@
 import {inventory} from './inventory.js'
 import {city} from './city.js'
-import {newMap} from './mainScript.js'
+import {city1} from './mainScript.js'
 
 class player
 {

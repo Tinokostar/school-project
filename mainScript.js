@@ -1,16 +1,15 @@
 import {city} from './city.js';
-import {player, player} from './player.js';
+import {player} from './player.js';
 import {inventory} from './inventory.js';
 
 var ctest = new city("israel", 0, 0, 0);
-var test = new player(0, 0, 0);
 var x;
 
 var city1 = new city("israel", 0, 0, 0);
 var city2 = new city("eygept", 0, 0, 0);
 var city3 = new city("cyprus", 0, 0, 0);
 
-var player = new player(2000, 0, 1, city1)
+var newPlayer = new player(2000, 0, 1, city1)
 var dayCounter = 0;
 
 
@@ -42,13 +41,8 @@ function newGame()
 }
 
 
-
+console.log(newPlayer)
 
 newMap()
 
-console.log();
-console.log(test.getInventory());
-ctest.setWheatValue(x);
-console.log(ctest);
-
-
+export {city1,city2,city3}
