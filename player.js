@@ -4,7 +4,7 @@ import {city1} from './mainScript.js'
 
 class player
 {
-    constructor(money, bodyGuards, shipTier, place)
+    constructor(money, bodyGuards, shipTier)
     {
         this.pInventory = new inventory(0,0,0);
         this.money = money;
@@ -56,6 +56,11 @@ class player
     setShipTier(value)
     {
         this.shipTier = value;
+    }
+
+    getWheat()
+    {
+        return this.pInventory[0];
     }
 
     setInventory(v1,v2,v3)

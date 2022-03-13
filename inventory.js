@@ -6,5 +6,22 @@ class inventory
         this.wood = wood;
         this.iron = iron;
     }
+
+    getWheat()
+    {
+        return this.wheat;
+    }
+
+    getWood()
+    {
+        return this.wood;
+    }
+
+    getIron()
+    {
+        return this.iron
+    }
+
+    
 }
 export {inventory}
