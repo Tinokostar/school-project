@@ -42,11 +42,11 @@ function newDay()
 
 newDay()
 
-trade("wheat", 100);
+trade("wood", 3);
 
 
-console.log(newPlayer)
-console.log(newPlayer.pInventory.getWheat())
+console.log(newPlayer);
+console.log(newPlayer.getInventory());
 
 
 export {city1,city2,city3,newPlayer}

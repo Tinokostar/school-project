@@ -14,6 +14,28 @@ function trade(material, number)
         newPlayer.setInventory(number,newPlayer.pInventory.getWood(),newPlayer.pInventory.getIron());
     }
 
+    if(material == "wood")
+    {
+
+        var x = newPlayer.getMoney()-number*newPlayer.getPlace().getWoodValue();
+        
+        newPlayer.setMoney(x)
+
+        newPlayer.setInventory(newPlayer.pInventory.getWheat(),number,newPlayer.pInventory.getWood());
+    }
+
+    if(material == "iron")
+    {
+
+        var x = newPlayer.getMoney()-number*newPlayer.getPlace().getIronValue();
+        
+        newPlayer.setMoney(x)
+
+        newPlayer.setInventory(newPlayer.pInventory.getWheat(),newPlayer.pInventory.getWood(),number);
+    }
+
+
+
 }
 
 export {trade};
