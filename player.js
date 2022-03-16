@@ -15,7 +15,7 @@ class player
 
     getPlace()
     {
-        return this.place;
+        return this.place.getName();
     }
 
     setPlace(name)
@@ -60,7 +60,7 @@ class player
 
     getWheat()
     {
-        return this.pInventory[0];
+        return this.pInventory.getWheat();
     }
 
     setInventory(v1,v2,v3)

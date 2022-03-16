@@ -1,9 +1,65 @@
 <head>
-    <script type="module" src="mainScript.js"></script>
+    <style>
+        body{
+            background-image: url('map.jpg');
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+        }
+
+        input{
+            width: 100px;
+            height: 50px;
+            cursor: pointer;
+            border-radius: 0px;
+            
+        }
+
+        .stats{
+            position: absolute;
+            right: 2%;
+        }
+
+        .inv{
+            float: right;
+            background-color: red;
+            padding: 5px;
+            margin: 0px;
+            text-align: center;
+            position: relative;
+            width: 100px;
+            height: 200x;
+            top: 200;
+        }
+
+
+    </style>
 </head>
 
 <body>
 
+    
+    <script type="module" src="mainScript.js">
+        
 
+    </script>
 
+    <form action="">
+        <div class="stats">
+            <p id="money">money: </p>
+            <p id="place">place: </p>
+            <p id="bodyGuards">body guards: </p>
+            <p id="shipTier">shipTier: </p>
+        </div>
+        <div class="inv">
+            <h3>inventory</h3>
+            <p id="inventory1">wheat: </p>
+            
+            <p id="inventory2">wood: </p>
+            
+            <p id="inventory3">iron: </p>
+        </div>
+
+        <input  type="button" value="back">
+
+    </form>
 </body>

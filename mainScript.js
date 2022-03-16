@@ -36,14 +36,19 @@ function newDay()
     city3.setWoodValue(city3.getRandomMaterialValue("wood"));
     city3.setIronValue(city3.getRandomMaterialValue("iron"));
 
-    printPirces()
+    printPirces();
 
 }
 
 newDay()
 
-trade("wood", 3);
-
+document.getElementById("money").innerHTML = "money: " + newPlayer.getMoney();
+document.getElementById("place").innerHTML = "place: " + newPlayer.getPlace();
+document.getElementById("bodyGuards").innerHTML = "body guards: " + newPlayer.getBodyGuards();
+document.getElementById("shipTier").innerHTML = "ship tier: " + newPlayer.getShipTier();
+document.getElementById("inventory1").innerHTML = "wheat: " + newPlayer.pInventory.getWheat();
+document.getElementById("inventory2").innerHTML = "wood: " + newPlayer.pInventory.getWood();
+document.getElementById("inventory3").innerHTML = "iron: " + newPlayer.pInventory.getIron();
 
 console.log(newPlayer);
 console.log(newPlayer.getInventory());
