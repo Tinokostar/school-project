@@ -19,7 +19,7 @@ class inventory
 
     getIron()
     {
-        return this.iron
+        return this.iron;
     }
 
     
