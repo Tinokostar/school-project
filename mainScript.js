@@ -23,12 +23,11 @@ function printPirces()
     console.log(city2);
     console.log(city3);
 }
-var moveisgay = 0;
+
 function move(place)
 {
-    if (moveisgay == 1){newPlayer.setPlace(place);
-    console.log(newPlayer.getPlace());}
-    
+    newPlayer.setPlace(place)
+    console.log(newPlayer);
     
 }
 
@@ -53,10 +52,12 @@ function newDay()
 }
 
 newDay()
-
-document.getElementById("israel").onclick = move(city1), moveisgay + 1;
-document.getElementById("egypt").onclick = move(city2);
-document.getElementById("cyprus").onclick = move(city3);
+document.getElementById("cyprus").onclick = function moveToCyprus()
+{newPlayer.setPlace(city3); console.log(newPlayer); document.getElementById("place").innerHTML = "place: " + newPlayer.getPlace();};
+document.getElementById("israel").onclick = function moveToIsrael()
+{newPlayer.setPlace(city1); console.log(newPlayer); document.getElementById("place").innerHTML = "place: " + newPlayer.getPlace();};
+document.getElementById("egypt").onclick = function moveToEgypt()
+{newPlayer.setPlace(city2); console.log(newPlayer); document.getElementById("place").innerHTML = "place: " + newPlayer.getPlace();};
 document.getElementById("money").innerHTML = "money: " + newPlayer.getMoney();
 document.getElementById("place").innerHTML = "place: " + newPlayer.getPlace();
 document.getElementById("bodyGuards").innerHTML = "body guards: " + newPlayer.getBodyGuards();
