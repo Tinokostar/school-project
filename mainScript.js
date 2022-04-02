@@ -3,6 +3,11 @@ import {player} from './player.js';
 import {inventory} from './inventory.js';
 import {trade} from './trade.js';
 
+var dayCounter = 0;
+var time = 6.00;
+
+
+
 var cityTest = new city("israel", 0, 0, 0);
 
 var city1 = new city("israel", 0, 0, 0);
@@ -10,7 +15,7 @@ var city2 = new city("eygept", 0, 0, 0);
 var city3 = new city("cyprus", 0, 0, 0);
 
 var newPlayer = new player(2000, 0, 1, city1)
-var dayCounter = 0;
+
 
 function printPirces()
 {
@@ -18,7 +23,14 @@ function printPirces()
     console.log(city2);
     console.log(city3);
 }
-
+var moveisgay = 0;
+function move(place)
+{
+    if (moveisgay == 1){newPlayer.setPlace(place);
+    console.log(newPlayer.getPlace());}
+    
+    
+}
 
 
 function newDay()
@@ -42,6 +54,9 @@ function newDay()
 
 newDay()
 
+document.getElementById("israel").onclick = move(city1), moveisgay + 1;
+document.getElementById("egypt").onclick = move(city2);
+document.getElementById("cyprus").onclick = move(city3);
 document.getElementById("money").innerHTML = "money: " + newPlayer.getMoney();
 document.getElementById("place").innerHTML = "place: " + newPlayer.getPlace();
 document.getElementById("bodyGuards").innerHTML = "body guards: " + newPlayer.getBodyGuards();
@@ -52,6 +67,7 @@ document.getElementById("inventory3").innerHTML = "iron: " + newPlayer.pInventor
 
 console.log(newPlayer);
 console.log(newPlayer.getInventory());
+console.log(parseFloat(time).toFixed(2))
 
 
 export {city1,city2,city3,newPlayer}
