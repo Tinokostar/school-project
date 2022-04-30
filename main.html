@@ -5,13 +5,12 @@
             background-repeat: no-repeat;
             background-size: 100% 100%;
         }
-
+        
         input{
             width: 100px;
             height: 50px;
             cursor: pointer;
             border-radius: 0px;
-            
         }
 
         .stats{
@@ -30,6 +29,8 @@
             height: 200x;
             top: 200;
         }
+        
+        
 
 
     </style>
@@ -41,7 +42,7 @@
     <script type="module" src="mainScript.js">
             
 
-        
+
     </script>
     
     
@@ -54,6 +55,7 @@
             <p id="bodyGuards">body guards: </p>
             <p id="shipTier">shipTier: </p>
         </div>
+
         <div class="inv">
             <h3>inventory</h3>
             <p id="inventory1">wheat: </p>
@@ -62,11 +64,23 @@
             
             <p id="inventory3">iron: </p>
         </div>
-        
-        <input type="button" id="cyprus" value="cyprus">
-        <input type="button" id="egypt" value="egypt">
-        <input type="button" id="israel" value="israel">
-        <input  type="button" value="back">
+
+        <div class="moveto" style="width: 100px;">
+            <input type="button" id="cyprus" value="cyprus">
+            <input type="button" id="egypt" value="egypt">
+            <input type="button" id="israel" value="israel">
+            <input  type="button" value="back">
+        </div>
+
+        <div class="buyMec">
+        <center>
+            <input placeholder="how many" style="height: 25; width: 70;" type="text" id="howMuch">
+            <input type="radio" name="mat" value="wheat" id="wheat">
+            <input type="radio" name="mat" value="wood" id="wood">
+            <input type="radio" name="mat" value="iron" id="iron">
+            <input type="button" id="buyB" value="buy" onclick="testprint()">
+        </center>
+        </div>
 
     </form>
 </body>

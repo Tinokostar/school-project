@@ -11,7 +11,7 @@ var time = 6.00;
 var cityTest = new city("israel", 0, 0, 0);
 
 var city1 = new city("israel", 0, 0, 0);
-var city2 = new city("eygept", 0, 0, 0);
+var city2 = new city("eygpt", 0, 0, 0);
 var city3 = new city("cyprus", 0, 0, 0);
 
 var newPlayer = new player(2000, 0, 1, city1)
@@ -51,7 +51,24 @@ function newDay()
 
 }
 
+
+
 newDay()
+function testprint()
+{
+    var x = document.getElementById("howMuch").value;
+    console.log(x);
+}
+
+var buy1 = 0;
+function tradePrompt()
+{
+    buy1 = window.prompt("")
+}
+
+document.getElementById("buyB").onclick = trade(buy1, document.getElementById("howmanytobuy"))
+
+
 document.getElementById("cyprus").onclick = function moveToCyprus()
 {newPlayer.setPlace(city3); console.log(newPlayer); document.getElementById("place").innerHTML = "place: " + newPlayer.getPlace();};
 document.getElementById("israel").onclick = function moveToIsrael()
